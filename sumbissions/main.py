@@ -35,24 +35,32 @@ introChoiceTwo = '2 | Who stole what was yours?'
 print(introChoiceOne,'\n',introChoiceTwo)
 
 #Compares user input with prompts
-def INTROresponse():
-    introChoiceInput = input()
-    global introChoiceResponse
-    introChoiceResponse = int(introChoiceInput)
+introChoiceInput = input()
+introChoiceResponse = int(introChoiceInput)
 
-#Returns user submission
-def INTROanswer():
-    if introChoiceResponse == 1:
-        print('>Master',username,', our box of jewels was stolen. The box is priceless.')
-    elif introChoiceResponse == 2:
-        print('>Master',username,', the thief was a large dragon.')
+if introChoiceResponse == 1:
+    print('>Master', username, ', our box of jewels was stolen. The box is priceless.')
+elif introChoiceResponse == 2:
+    print('>Master', username, ', the thief was a large dragon.')
+choice = introChoiceResponse
+time.sleep(0.5)
 
-#Junks the repeats the process for all info above
-INTROresponse()        
-INTROanswer()
 print('Try other option\n')
-INTROresponse()
-INTROanswer()
+
+introChoiceInput = input()
+introChoiceResponse = int(introChoiceInput)
+if choice == introChoiceResponse:
+    print("You have already chosen that... Choosing other option")
+    time.sleep(1)
+    if choice == 1:
+        print('>Master', username, ', the thief was a large dragon.')
+    else:
+        print('>Master', username, ', our box of jewels was stolen. The box is priceless.')
+else:
+    if choice == 1:
+        print('>Master', username, ', the thief was a large dragon.')
+    else:
+        print('>Master', username, ', our box of jewels was stolen. The box is priceless.')
 print('\n')
 
 
