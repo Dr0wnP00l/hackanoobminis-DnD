@@ -65,6 +65,34 @@ print('\n')
 
 
 
+#scenario
+def explainScenario():
+  time.sleep(1.5)
+  print('>You have already learned that a large  dragon has stolen our possesions.\n'
+      +'>The beast lives in Mount Kotrel Kham\n')
+  time.sleep(0.5)
+  print('>To get to Mount Kotrel Kham, you must pass several obstackles.\n'
+      +'>You first need to take the right side road to leave town.\n'
+      +'>Keep traveling until you meet the waters edge. Cross over a narrow bridge.\n'
+      +'>After a days worth of traveling, you will come to a village, stay clear.\n'
+      +'>Travel to Struk Kotrel until you come across the large Mount Kotrel Kham.\n'
+      +'>Travel up the mountain. You will then have to decide which cave to enter')
+  time.sleep(15)
+  print('\n>Good Luck Master',username,'. May you be strong and cunnning!')
+  
+  
+  
+
+print('>>>Are you ready to take on the quest?<<<')
+ready = input()
+ruready = str(ready)
+  
+if ruready == 'ready' or 'I am ready' or 'I\'m ready' or 'im ready' or 'yes':
+  print('>>>Good...<<<\n')
+  explainScenario()
+else:
+  print('>>>You will travel anywys.<<<\n')
+  explainScenario()
 
 
 
@@ -73,22 +101,14 @@ print('\n')
 
 
 
-def chooseCave():
-     cave = ''
-     while cave != '1' and cave != '2' and cave !='3':
-          print('Select a cave to go into. (1,2,3)')
-          cave = input()
-     return cave
+#def chooseCave():
+ #    cave = ''
+  #   while cave != '1' and cave != '2' and cave !='3':
+   #       print('Select a cave to go into. (1,2,3)')
+    #      cave = input()
+     #return cave
 
-chooseCave()
-
-
-
-
-
-
-
-
+#chooseCave()
 ### I'll work on this later when I figure out the story. Kinda Lame ATM
 #def checkCave():
   #  global userName
