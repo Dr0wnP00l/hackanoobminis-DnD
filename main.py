@@ -79,6 +79,9 @@ chooseCave()
 
 
 
+
+
+### I'll work on this later when I figure out the story. Kinda Lame ATM
 #def checkCave():
   #  global userName
     #print(str(username),' approaches the cave...')
