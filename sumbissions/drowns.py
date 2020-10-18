@@ -142,7 +142,7 @@ def stepOneStoryTwo():
   choice = int(choiceInput)
   
   if choice == 1:
-    #To be made-Long Path
+    #To be made-Long Path -(EASTER EGG)
      notMade()
   elif choice == 2:
     #To be made-Right path
