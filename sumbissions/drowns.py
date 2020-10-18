@@ -6,10 +6,17 @@ def newName():
     print('>>>Please create a name for your player.<<<')
     global username
     username=input()
+    print('Change name to',username,'? (yes or no)')
+    nameCheck = input()
+    if nameCheck != 'yes':
+      return newName()
+      
     print('***Name changed to >', username,'<***')
     print('\n\n')
     time.sleep(3)
 newName()
+
+
 
 
 #Intro scene one        Note: Add  more stories/levels
@@ -71,7 +78,7 @@ def explainScenario():
   print('>You have already learned that a large  dragon has stolen our possesions.\n'
       +'>The beast lives in Mount Kotrel Kham\n')
   time.sleep(0.5)
-  print('>To get to Mount Kotrel Kham, you must pass several obstackles.\n'
+  print('>To get to Mount Kotrel Kham, you must pass several obstacle.\n'
       +'>You first need to take the right side road to leave town.\n'
       +'>Keep traveling until you meet the waters edge. Cross over a narrow bridge.\n'
       +'>After a days worth of traveling, you will come to a village, stay clear.\n'
