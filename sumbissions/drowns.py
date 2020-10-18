@@ -17,6 +17,10 @@ def newName():
     #time.sleep(3) for game
 newName()
 
+def notMade():
+  print('\n\nYou have ventured as far as the game allows.\n More In Development!')
+  
+
 
 
 
@@ -105,6 +109,48 @@ def playerReady():
     return playerReady()
 playerReady()
 
+
+# prompts user to type next
+def NEXT():
+  print('\n')
+  print('>>>Type Next to continue...')
+  print('\n')
+NEXT()
+
+
+# Game step one -Right road out of town
+def stepOneStoryOne():
+  ready = input()
+  if ready == 'next':
+    time.sleep(1)
+    print('\n\nAfter talking to the slaves, you decide to continue through town.\n'
+          +'You passed by several banks and a gambling palace. You notice that the palace was filled with people.\n'
+          +'Contining, you meet the outskirts of town.\n'
+          +'You are greeted with two roads.\n'
+          #Add a function that asks what do you see for each path
+          +'The first road goes straight. The second road goes to the right.')
+  else:
+     NEXT()
+stepOneStoryOne()
+
+def stepOneStoryTwo():
+  print('\n\nWhich road should you take?')
+  StepOneChoiceOne = ' 1 | Straight'
+  StepOneChoiceTwo = '2 | To the right'
+  print(StepOneChoiceOne,'\n',StepOneChoiceTwo)
+  choiceInput = input()
+  choice = int(choiceInput)
+  
+  if choice == 1:
+    #To be made-Long Path
+     notMade()
+  elif choice == 2:
+    #To be made-Right path
+     notMade()
+  else:
+    print('\n>>>Invalid Response. TRY AGAIN')
+    return stepOneStoryTwo()
+stepOneStoryTwo()
 
 
 
