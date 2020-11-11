@@ -14,7 +14,7 @@ def newName():
       
     print('***Name changed to >', username,'<***')
     print('\n\n')
-    time.sleep(3) for game
+    time.sleep(3) 
 newName()
 
 def notMade():
@@ -27,18 +27,18 @@ def notMade():
 #Intro scene one        Note: Add  more stories/levels
 def introScene():
     print('>Welcome Master', username,'.')
-     time.sleep(2) for game
+    time.sleep(2) 
     print('\n')
     print('>We are glad you have decided to set out on this quest.')
-    print('>You are our last hope to reclaim what was righteously ours.')
-    time.sleep(5) for game
+    print('>You are our only hope to reclaim what was righteously ours.')
+    time.sleep(5) 
 introScene()
 
 #Prompt that asks for special replies
 def selectReply():
     print('\n')
     print('>>>Please reply by typing one of the numbered options<<<')
-    time.sleep(1) for game
+    time.sleep(1) 
 selectReply()
 
 #Unlassicied- Prompts for Scene one
@@ -55,7 +55,7 @@ if introChoiceResponse == 1:
 elif introChoiceResponse == 2:
     print('>Master', username, ', the thief was a large dragon.')
 choice = introChoiceResponse
-time.sleep(0.5) for game
+time.sleep(0.5) 
 
 print('Try other option\n')
 
@@ -63,7 +63,7 @@ introChoiceInput = input()
 introChoiceResponse = int(introChoiceInput)
 if choice == introChoiceResponse:
     print("You have already chosen that... Choosing other option")
-    time.sleep(1) for game
+    time.sleep(1) 
     if choice == 1:
         print('>Master', username, ', the thief was a large dragon.')
     else:
@@ -79,17 +79,17 @@ print('\n')
 
 #scenario
 def explainScenario():
-  time.sleep(1.5) for game
+  time.sleep(1.5) 
   print('>You have already learned that a large  dragon has stolen our possesions.\n'
       +'>The beast lives in Mount Kotrel Kham\n')
-  time.sleep(0.5) for game
-  print('>To get to Mount Kotrel Kham, you must pass several obstacle.\n'
+  time.sleep(0.5) 
+  print('>To get to Mount Kotrel Kham, you must pass several obstacles.\n'
       +'>You first need to take the right side road to leave town.\n'
       +'>Keep traveling until you meet the waters edge. Cross over a narrow bridge.\n'
       +'>After a days worth of traveling, you will come to a village, stay clear.\n'
       +'>Travel to Struk Kotrel until you come across the large Mount Kotrel Kham.\n'
       +'>Travel up the mountain. You will then have to decide which cave to enter')
-  time.sleep(15) for game
+  time.sleep(15) 
   print('\n>Good Luck Master',username,'. May you be strong and cunnning!')
   
   
@@ -125,7 +125,7 @@ def stepOneStoryOne():
     time.sleep(1)
     print('\n\nAfter talking to the slaves, you decide to continue through town.\n'
           +'You passed by several banks and a gambling palace. You notice that the palace was filled with people.\n'
-          +'Contining, you meet the outskirts of town.\n'
+          +'Continuing, you meet the outskirts of town.\n'
           +'You are greeted with two roads.\n'
           #Add a function that asks what do you see for each path
           +'The first road goes straight. The second road goes to the right.')
@@ -146,7 +146,32 @@ def stepOneStoryTwo():
      notMade()
   elif choice == 2:
     #To be made-Right path
-     notMade()
+    print('\nYou took the path to the right.\n'
+           +'After a few days of walking, you stumbled upon a small town that sat along the Yorksire River.\n'
+           +'One of the villager folks asked who you were.\n'
+           +'You replied that you were Sir',username,'and that you were on a quest to conquer an evil dragon that stole a precious box of jewels.\n')
+    time.sleep(1)
+    print('The villager gasped and took a step back at the word "dragon".\n'
+            +'"Where does the dragon live?"')
+    #~~~~~~~START CHOICES~~~~~~~~~~
+    StepTwoChoiceOne = ' 1 | In the Village'
+    StepTwoChoiceTwo = '2 | In the mountains'
+    StepTwoChoiceThree = '3 | I don\'t know'
+    print(StepTwoChoiceOne,'\n', StepTwoChoiceTwo,'\n', StepTwoChoiceThree)
+    choiceInput = input()
+    choice = int(choiceInput)
+    #~~~~~END CHOICES~~~~~~~~~~
+    if choice == 1:
+      notMade()
+    elif choice == 2:
+      notMade()
+      #Right Choice, villager relieved
+    elif choice == 3:
+      notMade()
+      #Villager mocks player
+    else:
+      notMade()
+      
   else:
     print('\n>>>Invalid Response. TRY AGAIN')
     return stepOneStoryTwo()
